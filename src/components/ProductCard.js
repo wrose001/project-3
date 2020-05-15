@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardBody, Button, CardTitle, CardText, CardImg, Row, Col, CardSubtitle, Container } from 'reactstrap';
-// import { ReactComponent as Logo } from 'public/img/product-1.png';
+// import product-1 from 'public/img/product-1.png'
 export function ProductCard(props) {
 
     return (
@@ -36,7 +36,7 @@ export function ProductCard(props) {
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                            <Button>Button</Button>
+                            <Button>Add to cart</Button>
                         </CardBody>
                     </Card>
                 </div>
@@ -47,7 +47,7 @@ export function ProductCard(props) {
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                            <Button>Button</Button>
+                            <Button>Add to cart</Button>
                         </CardBody>
                     </Card>
                 </div>
@@ -58,7 +58,7 @@ export function ProductCard(props) {
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                            <Button>Button</Button>
+                            <Button>Add to cart</Button>
                         </CardBody>
                     </Card>
                 </div>
@@ -69,7 +69,7 @@ export function ProductCard(props) {
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                            <Button>Button</Button>
+                            <Button>Add to cart</Button>
                         </CardBody>
                     </Card>
                 </div>
@@ -80,7 +80,7 @@ export function ProductCard(props) {
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                            <Button>Button</Button>
+                            <Button>Add to cart</Button>
                         </CardBody>
                     </Card>
                 </div>
@@ -91,7 +91,7 @@ export function ProductCard(props) {
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                            <Button>Button</Button>
+                            <Button>Add to cart</Button>
                         </CardBody>
                     </Card>
                 </div>
@@ -102,7 +102,7 @@ export function ProductCard(props) {
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                            <Button>Button</Button>
+                            <Button>Add to cart</Button>
                         </CardBody>
                     </Card>
                 </div>
@@ -113,7 +113,7 @@ export function ProductCard(props) {
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                            <Button>Button</Button>
+                            <Button>Add to cart</Button>
                         </CardBody>
                     </Card>
                 </div>
