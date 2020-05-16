@@ -7,7 +7,7 @@ const storeProducts = [
   {
     id: 1,
     title: "Sunglasses",
-    img: "img/product-1.png",
+    img: "img/sunglasses1.jpeg",
     price: "$12.76",
     company: "GOOGLE",
     info:
@@ -19,7 +19,7 @@ const storeProducts = [
   {
     id: 2,
     title: "Embellished Round Sunglasses",
-    img: "img/product-2.png",
+    img: "img/sunglasses2.jpeg",
     price: "$22.84",
     company: "SAMSUNG",
     info:
@@ -31,7 +31,7 @@ const storeProducts = [
   {
     id: 3,
     title: "Rectangular Sunglasses",
-    img: "img/product-3.png",
+    img: "img/sunglasses3.jpeg",
     price: "$9.94",
     company: "htc",
     info:
@@ -43,7 +43,7 @@ const storeProducts = [
   {
     id: 4,
     title: "Polarized Sunglasses",
-    img: "img/product-4.png",
+    img: "img/sunglasses4.jpeg",
     price: "$30.00",
     company: "htc",
     info:
@@ -55,7 +55,7 @@ const storeProducts = [
   {
     id: 5,
     title: "Cat Eye Sunglasses",
-    img: "img/product-5.png",
+    img: "img/sunglasses5.jpeg",
     price: "$17.00",
     company: "htc",
     info:
@@ -67,7 +67,7 @@ const storeProducts = [
   {
     id: 6,
     title: "Club Master Classic",
-    img: "img/product-6.png",
+    img: "img/sunglasses6.jpeg",
     price: "$122",
     company: "apple",
     info:
@@ -79,7 +79,7 @@ const storeProducts = [
   {
     id: 7,
     title: "Club Master Fleck",
-    img: "img/product-7.png",
+    img: "img/sunglasses7.jpeg",
     price: "$200",
     company: "apple",
     info:
@@ -91,7 +91,7 @@ const storeProducts = [
   {
     id: 8,
     title: "Aviator Classic",
-    img: "img/product-8.png",
+    img: "img/sunglasses8.jpeg",
     price: "$64.13",
     company: "apple",
     info:

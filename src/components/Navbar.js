@@ -16,6 +16,9 @@ export default class Navbar extends Component {
                     <NavLink href="/">
                         <img src={logo} alt="store" className="navbar-brand" />
                     </NavLink>
+                    {/* <NavItem className="col-10">
+                        <NavLink href="/cart">Products</NavLink>
+                    </NavItem> */}
                 </NavItem>
                 <NavItem className="col-2">
                     <NavLink href="#">Login</NavLink>
@@ -25,6 +28,7 @@ export default class Navbar extends Component {
                     <NavLink href="/cart"><BsFillBagFill />My cart</NavLink>
 
                 </NavItem>
+
 
             </Nav>
         );
