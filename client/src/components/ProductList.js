@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Jumbotron from './Jumbotron';
+// import Jumbotron from './Jumbotron';
 import Product from './Product';
 import { ProductCard } from './ProductCard';
 import { Container, Row } from 'reactstrap';
@@ -15,7 +15,7 @@ export default class ProductList extends Component {
     render() {
         return (
             <div>
-                <Jumbotron />
+                {/* <Jumbotron /> */}
                 <Product />
                 <Container>
                     <Row xs="4">
