@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { BsFillBagFill } from "react-icons/bs";
 import { Nav, NavItem, NavLink } from 'reactstrap';
 // import { Container, Row, Col } from 'reactstrap';
-import logo from '../logo.svg'
-import styled from 'styled-components';
+//import logo from '../logo.svg'
+//import styled from 'styled-components';
 
 
 
@@ -14,7 +14,7 @@ export default class Navbar extends Component {
             <Nav className="row align-items-center bg-info navbar-light">
                 <NavItem className="col-8">
                     <NavLink href="/">
-                        <img src={logo} alt="store" className="navbar-brand" />
+        {/*<img src={logo} alt="store" className="navbar-brand" /> */}
                     </NavLink>
                     {/* <NavItem className="col-10">
                         <NavLink href="/cart">Products</NavLink>
@@ -35,6 +35,5 @@ export default class Navbar extends Component {
     }
 }
 
-const ButtonContainer = styled.button`
-text-transform:capitalize;
-`
+//const ButtonContainer = styled.button`
+//text-transform:capitalize;
