@@ -1,38 +1,60 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { BsFillBagFill } from "react-icons/bs";
-import { Nav, NavItem, NavLink } from 'reactstrap';
-// import { Container, Row, Col } from 'reactstrap';
-import logo from '../logo/SHADESLOGO-01.svg'
-//import styled from 'styled-components';
-import "./Style.css"
-
+import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+import logo from '../logo.svg'
+import {ButtonContainer} from './Button'
+import styled from 'styled-components'
+import './Style.css'
 
 export default class Navbar extends Component {
-    render() {
-        return (
-            <Nav className="row align-items-center bg-light navbar-light mb-4">
-                <NavItem className="col-9">
-                    <NavLink href="/">
-        <img src={logo} alt="store" className="navbar-brand" width="200" />
-                    </NavLink>
-                    {/* <NavItem className="col-10">
-                        <NavLink href="/cart">Products</NavLink>
-                    </NavItem> */}
-                </NavItem>
+  render() {
+    return (
+      <nav className="container navbar navbar-expand-sm navbar-dark px-sm-5 justify-content-between">
+        <Link to="/">
+          <img src={logo} alt="store" className="navbar-brand" width="200"/>
+        </Link>
 
-                <NavItem className="col-3 pr-5" id="loginCart">
-                    <NavLink href="#" className="float-right"><i className="fas fa-portrait"></i> Login</NavLink>
-                    <NavLink href="/cart" className="float-right"><i className="fas fa-cart-plus"></i> My cart</NavLink>
-                    {/* <NavLink href="/cart"><BsFillBagFill />My cart</NavLink> */}
+        {/* <ul className="navbar-nav align-items-center">
+          <li className="nav-item ml-5">
+             <Link to="/" className="nav-link">
+              products
+             </Link>
+          </li>
+        </ul> */}
 
-                </NavItem>
+        <ul className="navbar-nav align-items-right">
+          <li className="nav-item mr-1">
+            <Link className="ml-auto" to="/login">
+                <ButtonContainer className="border-0 text-primary btnHover">
+                  <span className="mr-2">
+                    <i className="fas fa-portrait"></i>
+                  </span>
+                  login
+                </ButtonContainer> 
+            </Link>
+          </li>
+          <li className="nav-item mr-1">
+          <Link className="ml-auto" to="/cart">
+                <ButtonContainer className="border-0 text-primary btnHover">
+                  <span className="mr-2">
+                    <i className="fas fa-cart-plus"></i>
+                  </span>
+                  my cart
+                </ButtonContainer> 
+            </Link>
+          </li>
+        </ul>
 
-
-            </Nav>
-        );
-    }
+      </nav>
+    )
+  }
 }
 
-//const ButtonContainer = styled.button`
-//text-transform:capitalize;
+
+// const NavbarWrapper = styled.nav`
+//     background: var(--mainBlue);
+//     .nav-link {
+//       color: var(--mainWhite) !important;
+//       font-size: 1.3rem;
+//       text-transform: capitalize;
+//     }
+// `

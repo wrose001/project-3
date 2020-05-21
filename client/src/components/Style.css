@@ -1,11 +1,3 @@
-#loginCart a{
-    font-size: 24px
-}
-
-#jumbotron{
-    position: fixed; 
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+.btnHover:hover {
+    color: #2a2a2a !important;
 }
