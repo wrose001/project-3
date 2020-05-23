@@ -1,25 +1,47 @@
-:root{
-    --mainBlue:#2a2a72;
-    --lightBlue:#009ffd;
-    --mainWhite:#f3f3f3;
-    --mainDart:#232528;
-    --mainYellow:#ffa400;
-}
-body{
-  font-family: 'Oswald', sans-serif!important;
-  background: var(--mainWhite)!important;
-  color:var(--mainDarl)!important;
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
 }
 
-.text-title{
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
+body {
+  font-family: "Oswald", sans-serif !important;
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
 }
-.text-blue{
-    color: var(--mainBlue);
-    
+
+.text-title {
+  font-family: "Oswald", sans-serif !important;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
 }
-.text-bright{
-    color: var(--lightBlue);
+
+.text-blue {
+  color: var(--mainBlue);
+}
+
+.text-bright {
+  color: var(--lightBlue);
+}
+
+.btn-black {
+  background: transparent;
+  text-transfor: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+
+.btn-black:hover {
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
 }
