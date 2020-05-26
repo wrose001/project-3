@@ -15,6 +15,7 @@ export default class Cart extends Component {
             value => {
               const {cart} = value;
               if(cart.length>0){
+                console.log("Here is the cart")
                 return (
                   <React.Fragment>
                     <Title name="your" title="cart"/>
