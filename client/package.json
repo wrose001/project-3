@@ -3,13 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "bootstrap": "^4.5.1",
-=======
     "axios": "^0.19.2",
     "bootstrap": "^4.3.1",
     "js-cookie": "^2.2.1",
->>>>>>> 359fc528ce42105df06c20eac4b6bb9f247606e9
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-paypal-express-checkout": "^1.0.5",
