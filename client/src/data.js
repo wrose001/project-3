@@ -14,7 +14,22 @@ export const storeProducts = [
       "Sunglasses with plastic frames and UV-protective, tinted lenses. Plastic side pieces with an inset, gold-colored, metal detail.",
     inCart: false,
     count: 0,
-    total: 0
+    total: 0,
+    reviews: [
+      {
+        text: "This is a great product!!",
+        rating: 4.5,
+      },
+      {
+        text: "This is a product sucks",
+        rating: 1.0,
+      },
+      {
+        text: "This is a product is awesome!!",
+        rating: 5.0,
+      }
+
+    ]
   },
   {
     id: 2,
