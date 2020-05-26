@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import StarRating from './Stars.js';
+
+
 
 export default class Review extends Component {
     render() {
@@ -6,33 +9,44 @@ export default class Review extends Component {
             <div className="card">
                 <div className="card-body">
                     <h2 className="card-text">Please leave us a customer review</h2>
-                    <form>
-                        <div>
-                            <label>
-                                Name:
+                    <div className="row">
+                        <div className="col">
+                            <form>
                                 <div>
-                                    <input type="text" name="name" />
+                                    <label>
+                                        Name:
+                                        <div>
+                                            <input type="text" name="name" />
+                                        </div>
+                                    </label>
                                 </div>
-                            </label>
-                        </div>
-                        <div>
-                            <label>
-                                Add a Headline:
                                 <div>
-                                    <input type="text" name="name" />
+                                    <label>
+                                        Add a Headline:
+                                        <div>
+                                            <input type="text" name="name" />
+                                        </div>
+                                    </label>
                                 </div>
-                            </label>
-                        </div>
-                        <br />
-                        <br />
-                        <textarea />
+                                <br />
 
-                        <div>
-                            <input type="submit" value="Submit" />
+                                <textarea />
+
+
+                                <div>
+                                    <input type="submit" value="Submit" />
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                        <StarRating data={this.props.reviews} />
+                    </div>
                 </div>
             </div>
         )
     }
 }
+
+
+
+
+

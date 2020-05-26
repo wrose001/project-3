@@ -60,7 +60,9 @@ export default class Details extends Component {
                     </div>
                   </div>
                 </div>
-                <Review />
+                <Review
+                  reviews={value.detailProduct.reviews}
+                />
               </div>
             );
 
