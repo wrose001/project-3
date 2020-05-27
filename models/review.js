@@ -11,7 +11,8 @@ const ReviewSchema = new Schema({
     },
     reviewBody: {
         type: String,
-    }
+    },
+    itemID: int,
 
 });
 

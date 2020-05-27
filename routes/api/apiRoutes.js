@@ -5,7 +5,8 @@ router.route('/createReview').get((req,res) => {
   db.review.create({
     stars: req.body.stars,
     reviewUser: req.body.User,
-    reviewBody: req.body.reviewBody
+    reviewBody: req.body.reviewBody,
+    itemID: req.body.itemID
   })
 });
 
@@ -18,11 +19,5 @@ router.route('/signup').get((req,res) => {
   githubId: req.body.githubId,
   })
 });
-
-router.route('/login').get((req,res) => {
-
-  
-})
-
 
 module.exports = router;
