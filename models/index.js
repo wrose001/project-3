@@ -2,5 +2,6 @@
 
 module.exports = {
   User: require("./User"),
+  review: require("./review")
   
 };

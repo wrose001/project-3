@@ -46,7 +46,9 @@ export function StarRating(props) {
                 rating={hoverRating || rating}
                 onMouseEnter={() => setHoverRating(i)}
                 onMouseLeave={() => setHoverRating(0)}
-                onClick={() => setRating(i)}
+                onClick={() => {setRating(i); 
+                    this.props.changeRating(i);
+                }}
             />
         ))
     }
