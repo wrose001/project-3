@@ -5,7 +5,7 @@ import { StarRating, Star } from './Stars.js';
 
 export default class Review extends Component {
     constructor(props) {
-        this.state = {name: '', headline: "", body: "", rating: 0};
+        this.state = {name: '', headline: "", reviewBody: "", rating: 0};
         
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -52,7 +52,7 @@ export default class Review extends Component {
                                 </div>
                                 <br />
 
-                                <textarea value={this.state.body} onChange={this.handleChange}/>
+                                <textarea value={this.state.reviewBody} onChange={this.handleChange}/>
 
 
                                 <div>
