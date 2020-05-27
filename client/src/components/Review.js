@@ -4,6 +4,28 @@ import { StarRating, Star } from './Stars.js';
 
 
 export default class Review extends Component {
+    constructor(props) {
+        this.state = {name: '', headline: "", body: "", rating: 0};
+        
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleRating = this.handleRating.bind(this);
+      }
+    
+      handleChange(event) {
+        this.setState({[event.target.name]: event.target.value});
+      }
+    
+      handleSubmit(event) {
+        console.log(this.state);
+        event.preventDefault();
+      }
+
+      handleRating(value){
+          this.setState({rating: value})
+      }
+
+
     render() {
         return (
             <div className="card">
@@ -16,7 +38,7 @@ export default class Review extends Component {
                                     <label>
                                         Name:
                                         <div>
-                                            <input type="text" name="name" />
+                                            <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
                                         </div>
                                     </label>
                                 </div>
@@ -24,21 +46,21 @@ export default class Review extends Component {
                                     <label>
                                         Add a Headline:
                                         <div>
-                                            <input type="text" name="name" />
+                                            <input type="text" name="name" value={this.state.headline} onChange={this.handleChange}/>
                                         </div>
                                     </label>
                                 </div>
                                 <br />
 
-                                <textarea />
+                                <textarea value={this.state.body} onChange={this.handleChange}/>
 
 
                                 <div>
-                                    <input type="submit" value="Submit" />
+                                    <input type="submit" value="Submit" onClick={this.handleSubmit}/>
                                 </div>
                             </form>
                         </div>
-                        <StarRating data={this.props.reviews} />
+                        <StarRating data={this.props.reviews} changeRating={this.handleRating} />
                     </div>
                 </div>
             </div>
