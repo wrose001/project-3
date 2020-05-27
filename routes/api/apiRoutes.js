@@ -22,7 +22,7 @@ router.route('/signup').get((req,res) => {
 router.route('/login').get((req,res) => {
 
   
-});
+})
 
 
 module.exports = router;
