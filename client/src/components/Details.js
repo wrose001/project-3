@@ -3,8 +3,13 @@ import { ProductConsumer } from '../context'
 import { Link } from 'react-router-dom'
 import { ButtonContainer } from './Button'
 import Product from './Product';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
-import Review from './Review';
+import ReviewCards from './Review';
+import NewReview from './NewReview';
+// import StarRating from './Stars';
 
 export default class Details extends Component {
   render() {
@@ -16,17 +21,21 @@ export default class Details extends Component {
               value.detailProduct;
 
             return (
-              <div className="row align-items-center justify-content-center">
-                <div className="col-10 mx-auto text-center text-slanter text-blue my-5">
-                  <h1>
-                    {title}
-                  </h1>
-                </div>
-                <div className="row align-items-center justify-content-around ">
-                  <div className="col-10 mx-auto col-md-6 my-3 text-capitalize ">
+              <Container fluid>
+                <Row className="align-items-center justify-content-center">
+                  <Col xs={12} className="mx-auto text-center text-slanter text-blue my-5">
+                    <h1>
+                      {title}
+                    </h1>
+                  </Col>
+                </Row>
+                <Row className="align-items-center justify-content-around">
+                  <Col xs={1} />
+                  <Col xs={3}>
                     <img src={img} className="img-fluid" alt="product" />
-                  </div>
-                  <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                  </Col>
+                  <Col xs={1} />
+                  <Col className="mx-auto my-3 text-capitalize" xs={6}>
                     <h2>model: {title}</h2>
                     <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                       made by : <span className="text-uppercase">{company}</span>
@@ -58,12 +67,23 @@ export default class Details extends Component {
                         {inCart ? "inCart" : "add to cart"}
                       </ButtonContainer>
                     </div>
-                  </div>
-                </div>
-                <Review
-                  reviews={value.detailProduct.reviews}
-                />
-              </div>
+                  </Col>
+                  <Col xs={1} />
+                </Row>
+                <Row className="align-items-center py-5 justify-content-around">
+                  <Col xs={1} />
+                  <Col xs={3}>
+                    <NewReview />
+                  </Col>
+                  <Col xs={1} />
+                  <Col xs={6}>
+                    <ReviewCards
+                      data={value.detailProduct.reviews}
+                    />
+                  </Col>
+                  <Col xs={1} />
+                </Row>
+              </Container>
             );
 
           }
