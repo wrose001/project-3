@@ -1,10 +1,22 @@
 const router = require('express').Router();
-let Item = require('../models/items.model');
+var db = require("../models")
 
-router.route('/items').get((req,res) => {
-  Item.find()
-    .then(items => res.json(items))
-    .catch(err => res.status(400).json('Error: '+err));
+router.route('/createReview').get((req,res) => {
+  db.review.create({
+    stars: req.body.stars,
+    reviewUser: req.body.User,
+    reviewBody: req.body.reviewBody
+  })
+});
+
+router.route('/signup').get((req,res) => {
+  db.review.create({
+  username: req.body.username,
+  userCreated: req.body.userCreated,
+  jwtToken: req.body.token,
+  accessToken: req.body.accessToken,
+  githubId: req.body.githubId,
+  })
 });
 
 module.exports = router;

@@ -11,7 +11,7 @@ passport.use(new GitHubStrategy({
   },
   async function(accessToken, refreshToken, profile, cb) {
   
-  console.log(profile.login);
+  console.log(profile.username);
     
   try {
 
