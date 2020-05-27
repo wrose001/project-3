@@ -1,15 +1,14 @@
 const path = require("path");
 const router = require("express").Router();
 const passport = require("../passport");
- const routeHelper = require('./utils/routeHelper');
+const routeHelper = require('./utils/routeHelper');
 
-
-//const apiRoutes = require("./api");
+const apiRoutes = require("./api/apiRoutes");
 
 // API Routes
-//router.use("/api", apiRoutes);
+router.use(apiRoutes);
 /* OAuth Github Routes */
- router.get("/login", passport.authenticate('github'));
+router.get("/login", passport.authenticate('github'));
 
 router.get('/auth', passport.authenticate('github', {session: false, failureRedirect: routeHelper()}), function(req, res) {
     // Succesful authentication! 
@@ -23,4 +22,3 @@ router.use(function(req, res) {
 });
 
 module.exports = router;
-
