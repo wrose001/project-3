@@ -9,6 +9,9 @@ const ReviewSchema = new Schema({
     reviewUser: {
         type: String,
     },
+    reviewHeader: {
+        type: String,
+    },
     reviewBody: {
         type: String,
     },
