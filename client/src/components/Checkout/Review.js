@@ -6,6 +6,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
 
+
 const products = [
   { name: 'Product 1', desc: 'A nice thing', price: '$9.99' },
   { name: 'Product 2', desc: 'Another thing', price: '$3.45' },
@@ -33,15 +34,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Review() {
+export default function Review({value}) {
+  // const {cartTotal}=value;
   const classes = useStyles();
+
+
 
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
         Order summary
       </Typography>
-      <List disablePadding>
+      <Typography>
+        Ready to check out?
+      </Typography>
+      {/* <ListItem className={classes.listItem}>
+          <ListItemText primary="Total" />
+          <Typography variant="subtitle1" className={classes.total}>
+            ${cartTotal}
+          </Typography> */}
+        {/* </ListItem> */}
+      {/* <List disablePadding>
         {products.map((product) => (
           <ListItem className={classes.listItem} key={product.name}>
             <ListItemText primary={product.name} secondary={product.desc} />
@@ -54,8 +67,8 @@ export default function Review() {
             $34.06
           </Typography>
         </ListItem>
-      </List>
-      <Grid container spacing={2}>
+      </List> */}
+      {/* <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <Typography variant="h6" gutterBottom className={classes.title}>
             Shipping
@@ -80,7 +93,7 @@ export default function Review() {
             ))}
           </Grid>
         </Grid>
-      </Grid>
+      </Grid> */}
     </React.Fragment>
   );
 }

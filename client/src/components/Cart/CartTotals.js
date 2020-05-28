@@ -37,8 +37,14 @@ export default function CartTotals({ value, history }) {
                         </h5>
                         {/* <PayPalButton total={cartTotal} clearCart={clearCart} history={history}/> */}
                         <Link to="/checkout">
-                            <button className="checkout">Checkout</button>
+                            <button
+                                className="btn btn-outline-danger text-uppercase mb-3 px-5"
+                                type="button"
+                                onClick={() => clearCart()}>
+                                checkout
+                        </button>
                         </Link>
+                       
                     </div>
                 </div>
             </div>
