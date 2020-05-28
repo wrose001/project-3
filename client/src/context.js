@@ -8,6 +8,7 @@ class ProductProvider extends Component {
   state = {
     products: [],
     reviews: productReviews,
+    productReviews: [],
     detailProduct: detailProduct,
     cart: [],
     modalOpen: false,
@@ -42,13 +43,14 @@ class ProductProvider extends Component {
   }
 
   handleDetail = (id) => {
+    console.log("hande detail")
     const product = this.getItem(id);
     const reviews = this.getReviews(id);
     this.setState(
       () => {
         return {
           detailProduct: product,
-          reviews: reviews
+          productReviews: reviews
         };
       }
     )
@@ -158,6 +160,17 @@ class ProductProvider extends Component {
     })
   }
 
+  addNewReview = (review) => {
+    this.state.reviews.push(review)
+    this.setState(() => {
+      return {
+        reviews: this.state.reviews
+      }
+    })
+    // console.log(this.state.reviews);
+    this.handleDetail(review.itemID)
+  }
+
   addTotals = () => {
     let subTotal = 0;
     this.state.cart.map(item => (subTotal += item.total));
@@ -179,6 +192,7 @@ class ProductProvider extends Component {
           ...this.state,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
+          addNewReview: this.addNewReview,
           openModal: this.openModal,
           closeModal: this.closeModal,
           increment: this.increment,

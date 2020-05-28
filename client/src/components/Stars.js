@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 
 
-const Stars = ({ rating, newReview, on }) => {
+const Stars = ({ rating, newReview, changeRating }) => {
 
     const [newRating, setRating] = useState(0);
     const [hoverRating, setHoverRating] = useState(0);
@@ -30,6 +30,11 @@ const Stars = ({ rating, newReview, on }) => {
         setHoverRating(index)
     }
 
+    const handleNewRating = (rating) => {
+        setRating(rating);
+        changeRating(rating);
+    }
+
     return (
         stars.map((star) => {
             return (
@@ -37,7 +42,7 @@ const Stars = ({ rating, newReview, on }) => {
                     className="col"
                     onMouseEnter={() => (newReview) ? handleHover(star) : null}
                     onMouseLeave={() => (newReview) ? handleHover(0) : null}
-                    onClick={() => (newReview) ? setRating(hoverRating) : null}
+                    onClick={() => (newReview) ? handleNewRating(hoverRating) : null}
                 >
                     <svg
                         className={getClassName(star)}

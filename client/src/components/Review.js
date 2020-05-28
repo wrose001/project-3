@@ -8,7 +8,7 @@ function ReviewCards({ data }) {
 
     return (
         <CardColumns>
-            {(!data)
+            {(data.length < 1)
                 ? <div>No Reviews ... Be the First!</div>
                 : data.map((r) => {
                     return (<Card>

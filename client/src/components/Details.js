@@ -73,12 +73,15 @@ export default class Details extends Component {
                 <Row className="align-items-center py-5 justify-content-around">
                   <Col xs={1} />
                   <Col xs={3}>
-                    <NewReview />
+                    <NewReview
+                      itemID={value.detailProduct.id}
+                      onSubmit={value.addNewReview}
+                    />
                   </Col>
                   <Col xs={1} />
                   <Col xs={6}>
                     <ReviewCards
-                      data={value.reviews}
+                      data={value.productReviews}
                     />
                   </Col>
                   <Col xs={1} />

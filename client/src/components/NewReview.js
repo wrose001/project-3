@@ -7,19 +7,34 @@ import Stars from './Stars';
 
 
 
-function NewReview() {
+function NewReview({ itemID, onSubmit }) {
 
     const [formFields, setFormFields] = useState({
         reviewHeader: "",
         reviewUser: "",
         reviewBody: "",
         stars: 0,
-        itemID: 0,
+        itemID
     });
 
 
     const handleChange = (e) => {
-        console.log(e.target);
+        setFormFields({
+            ...formFields,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSubmit = () => {
+        console.log(formFields);
+        onSubmit(formFields);
+    }
+
+    const handleRating = (num) => {
+        setFormFields({
+            ...formFields,
+            stars: num
+        })
     }
 
     return (
@@ -33,23 +48,24 @@ function NewReview() {
                             <Stars
                                 rating={0}
                                 newReview={true}
+                                changeRating={handleRating}
                             />
                         </div>
                     </Form.Group>
-                    <Form.Group controlId="reviewUser">
+                    <Form.Group>
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" onChange={handleChange} />
+                        <Form.Control name="reviewUser" type="text" onChange={handleChange} />
                     </Form.Group>
-                    <Form.Group controlId="reviewHeader">
+                    <Form.Group >
                         <Form.Label>Header</Form.Label>
-                        <Form.Control type="text" />
+                        <Form.Control name="reviewHeader" type="text" onChange={handleChange} />
                     </Form.Group>
 
                     <Form.Group controlId="reviewBody">
                         <Form.Label>Review</Form.Label>
-                        <Form.Control as="textarea" rows="3" />
+                        <Form.Control name="reviewBody" onChange={handleChange} as="textarea" rows="3" />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" onClick={handleSubmit}>
                         Submit
                     </Button>
                 </Form>
