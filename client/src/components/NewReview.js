@@ -28,6 +28,13 @@ function NewReview({ itemID, onSubmit }) {
     const handleSubmit = () => {
         console.log(formFields);
         onSubmit(formFields);
+        setFormFields({
+            reviewHeader: "",
+            reviewUser: "",
+            reviewBody: "",
+            stars: 0,
+            itemID
+        })
     }
 
     const handleRating = (num) => {
@@ -46,7 +53,7 @@ function NewReview({ itemID, onSubmit }) {
                         <Form.Label>Rating</Form.Label>
                         <div className="row">
                             <Stars
-                                rating={0}
+                                rating={formFields.stars}
                                 newReview={true}
                                 changeRating={handleRating}
                             />
