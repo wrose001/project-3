@@ -4,24 +4,24 @@ import { StarRating, Star } from './Stars.js';
 
 
 export default class Review extends Component {
+    state = {name: " ", headline: " ", reviewBody: " ", rating: 0};
     constructor(props) {
-        this.state = {name: '', headline: "", reviewBody: "", rating: 0};
-        
+        super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleRating = this.handleRating.bind(this);
       }
     
-      handleChange(event) {
+      handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value});
       }
     
-      handleSubmit(event) {
+      handleSubmit = (event) => {
         console.log(this.state);
         event.preventDefault();
       }
 
-      handleRating(value){
+      handleRating = (value) => {
           this.setState({rating: value})
       }
 
