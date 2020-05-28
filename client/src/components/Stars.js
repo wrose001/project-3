@@ -34,15 +34,13 @@ const Stars = ({ rating, newReview, on }) => {
         stars.map((star) => {
             return (
                 <div
-                    className="star"
+                    className="col"
                     onMouseEnter={() => (newReview) ? handleHover(star) : null}
                     onMouseLeave={() => (newReview) ? handleHover(0) : null}
                     onClick={() => (newReview) ? setRating(hoverRating) : null}
                 >
                     <svg
-                        height="45px"
-                        width="45px"
-                        class={getClassName(star)}
+                        className={getClassName(star)}
                         viewBox="0 0 25 23"
                         data-rating={newRating}
                     >

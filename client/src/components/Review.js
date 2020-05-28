@@ -10,23 +10,26 @@ function ReviewCards({ data }) {
         <CardColumns>
             {(!data)
                 ? <div>No Reviews ... Be the First!</div>
-                : data.map((review) => {
+                : data.map((r) => {
                     return (<Card>
                         <Card.Header>
                             <div className="row">
                                 <Stars
-                                    rating={review.rating}
+                                    rating={r.stars}
                                     newReview={false}
                                 />
                             </div>
                         </Card.Header>
                         <Card.Body>
                             <Card.Title>
-                                {review.text}
+                                {r.reviewHeader}
                             </Card.Title>
                             <Card.Text>
-                                ~{review.user}
+                                {r.reviewBody}
                             </Card.Text>
+                            <footer className="blockquote-footer">
+                                <cite title="Source Title">{r.reviewUser}</cite>
+                            </footer>
                         </Card.Body>
                     </Card>)
                 })

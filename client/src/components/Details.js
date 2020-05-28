@@ -78,7 +78,7 @@ export default class Details extends Component {
                   <Col xs={1} />
                   <Col xs={6}>
                     <ReviewCards
-                      data={value.detailProduct.reviews}
+                      data={value.reviews}
                     />
                   </Col>
                   <Col xs={1} />

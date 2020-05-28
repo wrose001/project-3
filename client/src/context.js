@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { storeProducts, detailProduct } from './data'
+import { storeProducts, detailProduct, productReviews } from './data'
 import { runInThisContext } from 'vm';
 
 const ProductContext = React.createContext();
@@ -7,6 +7,7 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
   state = {
     products: [],
+    reviews: productReviews,
     detailProduct: detailProduct,
     cart: [],
     modalOpen: false,
@@ -32,15 +33,23 @@ class ProductProvider extends Component {
   }
 
   getItem = (id) => {
-    const product = this.state.products.find(item => item.id == id);
+    const product = this.state.products.find(item => item.id === id);
     return product;
+  }
+
+  getReviews = (id) => {
+    return this.state.reviews.filter(({ itemID }) => itemID === id);
   }
 
   handleDetail = (id) => {
     const product = this.getItem(id);
+    const reviews = this.getReviews(id);
     this.setState(
       () => {
-        return { detailProduct: product };
+        return {
+          detailProduct: product,
+          reviews: reviews
+        };
       }
     )
   }

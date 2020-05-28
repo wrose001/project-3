@@ -15,24 +15,6 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     total: 0,
-    reviews: [
-      {
-        user: "Billy Joe",
-        text: "This is a great product!!",
-        rating: 4.5,
-      },
-      {
-        user: "This Guy",
-        text: "This is a product sucks",
-        rating: 1.0,
-      },
-      {
-        user: "Sally Sue",
-        text: "This is a product is awesome!!",
-        rating: 5.0,
-      }
-
-    ]
   },
   {
     id: 2,
@@ -132,3 +114,27 @@ export const detailProduct = {
   count: 0,
   total: 0
 };
+
+export const productReviews = [
+  {
+    reviewHeader: "Header 1",
+    reviewUser: "Billy Joe",
+    reviewBody: "This is a great product!!",
+    stars: 4.5,
+    itemID: 1,
+  },
+  {
+    reviewHeader: "Header 2",
+    reviewUser: "This Guy",
+    reviewBody: "This is a product sucks",
+    stars: 1.0,
+    itemID: 1,
+  },
+  {
+    reviewHeader: "Header 3",
+    reviewUser: "Sally Sue",
+    reviewBody: "This is a product is awesome!!",
+    stars: 5.0,
+    itemID: 1,
+  }
+]
