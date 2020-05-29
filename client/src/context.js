@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { storeProducts, detailProduct } from './data'
+import { storeProducts, detailProduct, productReviews } from './data'
 import { runInThisContext } from 'vm';
 
 const ProductContext = React.createContext();
@@ -7,6 +7,8 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
   state = {
     products: [],
+    reviews: productReviews,
+    productReviews: [],
     detailProduct: detailProduct,
     cart: [],
     modalOpen: false,
@@ -32,15 +34,24 @@ class ProductProvider extends Component {
   }
 
   getItem = (id) => {
-    const product = this.state.products.find(item => item.id == id);
+    const product = this.state.products.find(item => item.id === id);
     return product;
   }
 
+  getReviews = (id) => {
+    return this.state.reviews.filter(({ itemID }) => itemID === id);
+  }
+
   handleDetail = (id) => {
+    console.log("hande detail")
     const product = this.getItem(id);
+    const reviews = this.getReviews(id);
     this.setState(
       () => {
-        return { detailProduct: product };
+        return {
+          detailProduct: product,
+          productReviews: reviews
+        };
       }
     )
   }
@@ -149,6 +160,17 @@ class ProductProvider extends Component {
     })
   }
 
+  addNewReview = (review) => {
+    this.state.reviews.push(review)
+    this.setState(() => {
+      return {
+        reviews: this.state.reviews
+      }
+    })
+    // console.log(this.state.reviews);
+    this.handleDetail(review.itemID)
+  }
+
   addTotals = () => {
     let subTotal = 0;
     this.state.cart.map(item => (subTotal += item.total));
@@ -170,6 +192,7 @@ class ProductProvider extends Component {
           ...this.state,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
+          addNewReview: this.addNewReview,
           openModal: this.openModal,
           closeModal: this.closeModal,
           increment: this.increment,

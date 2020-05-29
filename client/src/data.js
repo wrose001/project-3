@@ -15,21 +15,6 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     total: 0,
-    reviews: [
-      {
-        text: "This is a great product!!",
-        rating: 4.5,
-      },
-      {
-        text: "This is a product sucks",
-        rating: 1.0,
-      },
-      {
-        text: "This is a product is awesome!!",
-        rating: 5.0,
-      }
-
-    ]
   },
   {
     id: 2,
@@ -86,7 +71,7 @@ export const storeProducts = [
     price: 122,
     company: "Rotten Apple",
     info:
-      "Ray-Ban Clubmaster Classic sunglasses are retro and timeless. Inspired by the 50â€™s, the unmistakable design of the Clubmaster Classic is worn by cultural intellectuals, those who lead the changed tomorrow.",
+      "Ray-Ban Clubmaster Classic sunglasses are retro and timeless. Inspired by the 50’s, the unmistakable design of the Clubmaster Classic is worn by cultural intellectuals, those who lead the changed tomorrow.",
     inCart: false,
     count: 0,
     total: 0
@@ -129,3 +114,27 @@ export const detailProduct = {
   count: 0,
   total: 0
 };
+
+export const productReviews = [
+  {
+    reviewHeader: "Header 1",
+    reviewUser: "Billy Joe",
+    reviewBody: "This is a great product!!",
+    stars: 4.5,
+    itemID: 1,
+  },
+  {
+    reviewHeader: "Header 2",
+    reviewUser: "This Guy",
+    reviewBody: "This is a product sucks",
+    stars: 1.0,
+    itemID: 1,
+  },
+  {
+    reviewHeader: "Header 3",
+    reviewUser: "Sally Sue",
+    reviewBody: "This is a product is awesome!!",
+    stars: 5.0,
+    itemID: 1,
+  }
+]
