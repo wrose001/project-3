@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const ReviewSchema = new Schema({
     stars: {
-    type: int,
+    type: Number,
     },
     reviewUser: {
         type: String,
@@ -15,7 +15,7 @@ const ReviewSchema = new Schema({
     reviewBody: {
         type: String,
     },
-    itemID: int,
+    itemID: Number,
 
 });
 

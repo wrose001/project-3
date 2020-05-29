@@ -1,5 +1,5 @@
 const router = require('express').Router();
-var db = require("../models")
+var db = require("../../models")
 
 router.route('/createReview').post((req,res) => {
   db.review.create({
