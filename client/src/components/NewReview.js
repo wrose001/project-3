@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import Stars from './Stars';
+import axios from 'axios';
 
 
 
@@ -27,14 +28,34 @@ function NewReview({ itemID, onSubmit }) {
 
     const handleSubmit = () => {
         console.log(formFields);
-        onSubmit(formFields);
-        setFormFields({
-            reviewHeader: "",
-            reviewUser: "",
-            reviewBody: "",
-            stars: 0,
-            itemID
+
+
+        const formData = {
+            rating: formFields.stars,
+            name: formFields.reviewUser,
+            headline: formFields.reviewHeader,
+            reviewbody: formFields.reviewBody,
+            itemID: formFields.itemID
+        }
+        // itemID: 8
+        // reviewBody: "hi"
+        // reviewHeader: "title"
+        // reviewUser: "george"
+        // stars: 4
+
+
+
+        axios.post('/createReview', formData).then(reviewResult => {
+            onSubmit(formFields);
+            setFormFields({
+                reviewHeader: "",
+                reviewUser: "",
+                reviewBody: "",
+                stars: 0,
+                itemID
+            })
         })
+
     }
 
     const handleRating = (num) => {
