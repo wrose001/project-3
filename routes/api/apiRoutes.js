@@ -14,4 +14,10 @@ router.route('/createReview').post((req, res) => {
   })
 });
 
+router.route('./getReview/:productId').get((req, res) => {
+  db.review.find({
+    itemID: req.params.productId
+  }).then(data => res.json(data))
+})
+
 module.exports = router;

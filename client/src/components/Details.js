@@ -80,7 +80,7 @@ export default class Details extends Component {
                   </Col>
                   <Col xs={1} />
                   <Col xs={6}>
-                    <ReviewCards
+                    <ReviewCards productId = {value.detailProduct.id}
                       data={value.productReviews}
                     />
                   </Col>

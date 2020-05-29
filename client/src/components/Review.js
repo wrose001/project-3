@@ -4,8 +4,8 @@ import Stars from './Stars';
 import CardColumns from "react-bootstrap/CardColumns";
 import Card from "react-bootstrap/Card";
 
-function ReviewCards({ data }) {
-
+function ReviewCards({ data, ...props }) {
+    console.log(props.productId)
     return (
         <CardColumns>
             {(data.length < 1)
