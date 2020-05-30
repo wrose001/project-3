@@ -3,7 +3,7 @@
 Shades is an  ecommerce site that offers designer sunglasses at affordable prices. 
 You can find the deployed application here: https://shades-gs.herokuapp.com/
 
-
+USER STORY: 
 
 ## TABLE OF CONTENTS
 
@@ -15,11 +15,22 @@ You can find the deployed application here: https://shades-gs.herokuapp.com/
 5. [ACKNOWLEDGMENTS](#acknowledgments)
 6. [BADGES](#badges)
 
+
 ## FEATURES 
 
+This application is developed as a MERN stack. The MERN stack is a JavaScript stack that's designed to make the development process smoother. MERN includes four open-source components: MongoDB, Express, React, and Node. js.
 
 ## INSTALLATION 
 
+You can install dependencies via[npm] which is bundled with[node] and
+should be installed as one of your project's `dependencies`:
+
+```
+npm install --save 
+```
+
+> This package also depends on `react`. Please make sure you have it installed
+> as well.
 
 ## PREVIEW 
 
