@@ -34,7 +34,7 @@ npm install --save
 
 ## PREVIEW 
 
-
+![Demo](https://media.giphy.com/media/l3Zgg9Vw7JPSJndWjy/giphy.gif)
 
 ## AUTHORS
 
