@@ -27,6 +27,14 @@ SO THAT I can purchase affordable designer sunglasses.
 
 This application is developed as a MERN stack. The MERN stack is a JavaScript stack that's designed to make the development process smoother. MERN includes four open-source components: MongoDB, Express, React, and Node. js.
 
+A real-world eCommerce site using React. Any user can visit the webpage, but a user has to log in in order to proceed with payment. To log in, users must authenticate with their GitHub account using OAuth.
+
+Products are displayed in cards in a responsive layout on the index page. When a user clicks on a product image, they get redirected to a Product page with a description of the item, as well as the designer’s label, and the price. Here, customers can read existing customer reviews, or leave their own with a star-rating system (out of 5 stars).
+
+Once users add a pair of sunglasses to their cart, they can navigate to My Cart, view the items they have selected, and increase or decrease the quantity, which automatically adjusts the total price, including tax. Users purchase items via PayPal, an intentional decision made by developers to provide added security for customers’ private payment data.
+
+
+
 ## INSTALLATION 
 
 You can install dependencies via[npm] which is bundled with[node] and
