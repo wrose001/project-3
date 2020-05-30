@@ -3,7 +3,14 @@
 Shades is an  ecommerce site that offers designer sunglasses at affordable prices. 
 You can find the deployed application here: https://shades-gs.herokuapp.com/
 
-USER STORY: 
+
+### USER STORY:
+AS A customer,
+
+I WANT to use an eCommerce website (Shades),
+
+SO THAT I can purchase affordable designer sunglasses.
+
 
 ## TABLE OF CONTENTS
 
